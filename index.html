@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartik Gahlot | AI Engineering Student Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e40af', // Darker Blue
+                        'secondary-gray': '#f3f4f6', // Light Gray background
+                        'accent-orange': '#f97316', // Orange highlight
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for smooth scrolling and card effects */
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 4rem;
+            height: 4px;
+            background-color: #f97316; /* accent-orange */
+            border-radius: 9999px;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e40af;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        /* Style for skill badges */
+        .skill-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            margin: 0.5rem 0.5rem 0 0;
+            border-radius: 9999px;
+            background-color: #e0f2f1; /* Light cyan */
+            color: #042f2e; /* Dark teal */
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        .skill-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-secondary-gray text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-xl font-extrabold text-primary-blue tracking-wide">
+                    KARTIK GAHLOT
+                </a>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#about" class="text-gray-500 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition duration-150">About</a>
+                    <a href="#skills" class="text-gray-500 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition duration-150">Skills</a>
+                    <a href="#education" class="text-gray-500 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition duration-150">Education</a>
+                    <a href="#achievements" class="text-gray-500 hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition duration-150">Achievements</a>
+                    <a href="#contact" class="bg-primary-blue text-white hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-150 shadow-md">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Hero Section -->
+        <section id="hero" class="bg-white p-8 md:p-16 rounded-3xl shadow-2xl mb-16">
+            <div class="md:flex md:space-x-12 items-center">
+                <!-- Profile Image -->
+                <div class="flex-shrink-0 mb-6 md:mb-0">
+                    <img class="h-48 w-48 object-cover rounded-full ring-4 ring-primary-blue ring-offset-4 mx-auto"
+                         src="kartik.jpg.jpg"
+                         alt="Kartik Gahlot Profile Picture"
+                         onerror="this.onerror=null;this.src='https://placehold.co/192x192/1e40af/ffffff?text=K+G';"
+                    >
+                </div>
+                <!-- Bio & Title -->
+                <div>
+                    <span class="text-xl text-accent-orange font-semibold mb-2 block">Hello, I'm</span>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-2">Kartik Gahlot</h1>
+                    <h2 class="text-2xl text-primary-blue font-medium mb-4">STUDENT | B.Tech AI Engineering | NSUT '2028</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">
+                        I am a first-year engineering student with a strong foundation in **C++, Python, and Data Structures & Algorithms**. Passionate about problem-solving and logical thinking, I am eager to apply my skills in a practical setting. Beyond academics, I enjoy playing chess and lawn tennis, which enhance my strategic thinking and resilience.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-12">
+            <h3 class="section-title text-gray-900">About Me</h3>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    I am looking for opportunities to learn, grow, and contribute effectively in a dynamic environment. I bring a **strong work ethic** and a commitment to teamwork and critical thinking, constantly seeking creative solutions to complex problems. My academic pursuit is a B.Tech in Computer Science with a specialization in **Artificial Intelligence Engineering** from Netaji Subhas University of Technology, Delhi.
+                </p>
+            </div>
+        </section>
+        
+        <!-- --- -->
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-12">
+            <h3 class="section-title text-gray-900">Technical Skills</h3>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="mb-6">
+                    <h4 class="text-xl font-semibold text-primary-blue mb-3">Programming & Technical</h4>
+                    <div>
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">C</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">Data Structures and Algorithms (DSA)</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-primary-blue mb-3">Analytical & Soft Skills</h4>
+                    <div>
+                        <span class="skill-badge bg-yellow-100 text-yellow-800">Problem Solving</span>
+                        <span class="skill-badge bg-yellow-100 text-yellow-800">Adaptability</span>
+                        <span class="skill-badge bg-yellow-100 text-yellow-800">Time Management</span>
+                        <span class="skill-badge bg-yellow-100 text-yellow-800">Work Ethic</span>
+                        <span class="skill-badge bg-yellow-100 text-yellow-800">Teamwork</span>
+                        <span class="skill-badge bg-yellow-100 text-yellow-800">Critical Thinking</span>
+                        <span class="skill-badge bg-yellow-100 text-yellow-800">Creativity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- --- -->
+
+        <!-- Education Section -->
+        <section id="education" class="py-12">
+            <h3 class="section-title text-gray-900">Education</h3>
+            <div class="bg-white p-8 rounded-xl shadow-lg space-y-8">
+                <!-- NSUT -->
+                <div class="border-l-4 border-primary-blue pl-4">
+                    <h4 class="text-2xl font-bold text-gray-900">B.Tech in Computer Science (AI Engg. Specialization)</h4>
+                    <p class="text-lg font-medium text-gray-700">Netaji Subhas University of Technology, Delhi</p>
+                    <p class="text-gray-500 italic mb-2">2024 - 2028 (Expected)</p>
+                    <p class="text-sm text-gray-600">Current CGPA: 7.4</p>
+                </div>
+                <!-- ITBP School -->
+                <div class="border-l-4 border-accent-orange pl-4">
+                    <h4 class="text-2xl font-bold text-gray-900">High School Diploma</h4>
+                    <p class="text-lg font-medium text-gray-700">ITBP Public School, Delhi</p>
+                    <p class="text-gray-500 italic mb-2">2015 - 2024</p>
+                    <p class="text-sm text-gray-600">Class 12: 91.8% | Class 10: 96.8%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-12">
+            <h3 class="section-title text-gray-900">Achievements & Extras</h3>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg">
+                    <li class="pl-2">
+                        **The Debugging Society:** Chosen as a member of the DSA/CP department out of hundreds of applicants.
+                    </li>
+                    <li class="pl-2">
+                        **Olympiads:** National Science Olympiad runner up in class 11th and International Mathematics Olympiad winner in class 8th.
+                    </li>
+                    <li class="pl-2">
+                        **Science Fair:** DRO Science fare gold medallist.
+                    </li>
+                    <li class="pl-2">
+                        **Volunteer:** Active volunteer in organizing hackathon during Spacecon 2024.
+                    </li>
+                    <li class="pl-2">
+                        **Interests:** Enjoy playing chess and lawn tennis, enhancing strategic thinking and resilience.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12">
+            <h3 class="section-title text-gray-900">Get in Touch</h3>
+            <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-xl font-medium text-gray-700 mb-2">I am currently looking for opportunities to learn and grow.</p>
+                    <p class="text-lg text-gray-600">Let's connect and discuss how I can contribute to your team or project.</p>
+                </div>
+                <button
+                    onclick="sendEmail()"
+                    class="flex items-center space-x-2 bg-accent-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105"
+                >
+                    <!-- Icon for email (lucide-react icon equivalent) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>Send a Message (Gmail)</span>
+                </button>
+            </div>
+            
+            <div class="mt-8 text-center text-gray-600">
+                <p class="text-lg">Email: <span class="font-semibold text-primary-blue">kartikgahlot0865@gmail.com</span></p>
+                <p class="text-lg">Phone: <span class="font-semibold text-primary-blue">+91 9289357717</span></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-blue py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <p>&copy; <span id="current-year"></span> Kartik Gahlot. All rights reserved.</p>
+            <p class="text-sm mt-1">Built with HTML and Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Contact Feature and Footer Year -->
+    <script>
+        /**
+         * Function to open the default email client with pre-filled details.
+         * The user specifically requested this functionality for sending messages.
+         */
+        function sendEmail() {
+            const recipient = 'kartikgahlot0865@gmail.com';
+            const subject = encodeURIComponent('Inquiry from Kartik Gahlot Portfolio');
+            const body = encodeURIComponent('Hello Kartik,\n\nI saw your portfolio and wanted to reach out regarding...');
+            
+            // Construct the mailto link
+            const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+            
+            // Open the link
+            window.open(mailtoLink, '_self');
+        }
+
+        // Set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
